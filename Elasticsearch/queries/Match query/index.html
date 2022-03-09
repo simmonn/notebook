@@ -1,0 +1,1122 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>Match query - Simmon NoteBook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#top-level-parameters-for-match-" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Simmon NoteBook" class="md-header__button md-logo" aria-label="Simmon NoteBook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Simmon NoteBook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Match query
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Simmon NoteBook" class="md-nav__button md-logo" aria-label="Simmon NoteBook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Simmon NoteBook
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Learning-Note
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Elasticsearch
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Elasticsearch" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Elasticsearch
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Queries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Queries" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Queries
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Boolean%20Query/" class="md-nav__link">
+        Boolean Query
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Compound%20queries/" class="md-nav__link">
+        Compound queries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Full%20text%20queries/" class="md-nav__link">
+        Full text queries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Match%20boolean%20prefix%20query/" class="md-nav__link">
+        Match boolean prefix query
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Match query
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Match query
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#top-level-parameters-for-match-" class="md-nav__link">
+    Top-level parameters for match ---顶级参数
+  </a>
+  
+    <nav class="md-nav" aria-label="Top-level parameters for match ---顶级参数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#field-" class="md-nav__link">
+    field---(必传，对象)检索字段
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters-for" class="md-nav__link">
+    Parameters for 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+    <nav class="md-nav" aria-label="Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#short-request-example-" class="md-nav__link">
+    Short request example - 简单的请求参数案例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-the-match-query-works-match" class="md-nav__link">
+    How the match query works -那么match 查询是怎么工作的呢
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fuzziness-in-the-match-query-match" class="md-nav__link">
+    Fuzziness in the match query - match中的模糊搜索
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zero-terms-query" class="md-nav__link">
+    Zero terms query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cutoff-frequency" class="md-nav__link">
+    Cutoff frequency
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warning" class="md-nav__link">
+    WARNING
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprecated-in-730" class="md-nav__link">
+    Deprecated in 7.3.0.
+  </a>
+  
+    <nav class="md-nav" aria-label="Deprecated in 7.3.0.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synonyms-" class="md-nav__link">
+    Synonyms--同义词
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Query%20DSL/" class="md-nav__link">
+        Query DSL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Resocing/" class="md-nav__link">
+        Resocing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%A1%B0%E5%87%8F%E5%87%BD%E6%95%B0/" class="md-nav__link">
+        衰减函数
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          JVM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="JVM" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          JVM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JVM/JFR%26JMC%26JCMD/" class="md-nav__link">
+        JRF&JMC&JCMD
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Lucene
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lucene" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Lucene
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lucene/Lucene%20Segment%20Merge%E5%8E%9F%E7%90%86%E5%8F%8A%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" class="md-nav__link">
+        Lucene Segment Merge原理及源码分析
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lucene/Lucene%20index%20file%28translation%29/" class="md-nav__link">
+        Lucene index file(translation)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lucene/Similarity/" class="md-nav__link">
+        Similarity
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#top-level-parameters-for-match-" class="md-nav__link">
+    Top-level parameters for match ---顶级参数
+  </a>
+  
+    <nav class="md-nav" aria-label="Top-level parameters for match ---顶级参数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#field-" class="md-nav__link">
+    field---(必传，对象)检索字段
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters-for" class="md-nav__link">
+    Parameters for 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+    <nav class="md-nav" aria-label="Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#short-request-example-" class="md-nav__link">
+    Short request example - 简单的请求参数案例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-the-match-query-works-match" class="md-nav__link">
+    How the match query works -那么match 查询是怎么工作的呢
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fuzziness-in-the-match-query-match" class="md-nav__link">
+    Fuzziness in the match query - match中的模糊搜索
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zero-terms-query" class="md-nav__link">
+    Zero terms query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cutoff-frequency" class="md-nav__link">
+    Cutoff frequency
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warning" class="md-nav__link">
+    WARNING
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprecated-in-730" class="md-nav__link">
+    Deprecated in 7.3.0.
+  </a>
+  
+    <nav class="md-nav" aria-label="Deprecated in 7.3.0.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synonyms-" class="md-nav__link">
+    Synonyms--同义词
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+  <h1>Match query</h1>
+
+<blockquote>
+<p>Returns documents that match a provided text, number, date or boolean value. The provided text is analyzed before matching.</p>
+<p>The <code>match</code> query is the standard query for performing a full-text search, including options for fuzzy matching.</p>
+</blockquote>
+<p>会返回匹配到text、number、date或者Boolean类型的文档，匹配之前会对text类型进行分词。</p>
+<p>match是全文检索的标准检索，包括可以设置模糊匹配的选项。</p>
+<p>请求示例</p>
+<pre><code class="language-json">GET /_search
+{
+    &quot;query&quot;: {
+        &quot;match&quot; : {
+            &quot;message&quot; : {
+                &quot;query&quot; : &quot;this is a test&quot;
+            }
+        }
+    }
+}
+</code></pre>
+<h4 id="top-level-parameters-for-match-">Top-level parameters for match ---顶级参数</h4>
+<p><field>  (Required, object) Field you wish to search.</p>
+<h5 id="field-">field---(必传，对象)检索字段</h5>
+<h3 id="parameters-for">Parameters for <field></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>query</strong></td>
+<td>(Required) Text, number, boolean value or date you wish to find in the provided <code>&lt;field&gt;</code>.<br />The <code>match</code> query <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.4/analysis.html">analyzes</a> any provided text before performing a search. This means the <code>match</code> query can search <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.4/text.html"><code>text</code></a> fields for analyzed tokens rather than an exact term.</td>
+</tr>
+<tr>
+<td></td>
+<td>（必传）希望在提供的<field>字段中搜索text，number，boolean或者日期类型。<br />检索之前match会对text类型字段进行分词。这就意味着match对搜索的text字段进行分词后的token查询，而不是具体的词条查询。</td>
+</tr>
+<tr>
+<td><strong>analyzer</strong></td>
+<td>(Optional, string) <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.4/analysis.html">Analyzer</a> used to convert the text in the <code>query</code> value into tokens. Defaults to the <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.4/analysis.html#specify-index-time-analyzer">index-time analyzer</a> mapped for the <code>&lt;field&gt;</code>. If no analyzer is mapped, the index’s default analyzer is used.</td>
+</tr>
+<tr>
+<td></td>
+<td>（可选，string）分词器会将query中text类型的值转换为token。默认情况下，使用索引分词器映射到这个字段。如果没有映射分词器，索引则会使用默认分词器。</td>
+</tr>
+<tr>
+<td><strong>auto_generate_synonyms_phrase_query</strong></td>
+<td>(Optional, boolean) If <code>true</code>, <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.4/query-dsl-match-query-phrase.html">match phrase</a> queries are automatically created for multi-term synonyms. Defaults to <code>true</code>.<br />See <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.4/query-dsl-match-query.html#query-dsl-match-query-synonyms">Use synonyms with match query</a> for an example.</td>
+</tr>
+<tr>
+<td></td>
+<td>（可选，布尔类型）如果为true，会自动为multi-term同义词创建match_phrase。<br />可以参考match查询同义词的例子。</td>
+</tr>
+<tr>
+<td><strong>fuzziness</strong></td>
+<td>(Optional, string) Maximum edit distance allowed for matching. See <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.4/common-options.html#fuzziness">Fuzziness</a> for valid values and more information. See <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.4/query-dsl-match-query.html#query-dsl-match-query-fuzziness">Fuzziness in the match query</a> for an example.</td>
+</tr>
+<tr>
+<td></td>
+<td>（可选，字符串类型）匹配的时候可以指定最大编辑距离，查看模糊查询可用值或者更多信息，查看match中模糊查询的例子。</td>
+</tr>
+<tr>
+<td><strong>max_expansions</strong></td>
+<td>(Optional, integer) Maximum number of terms to which the query will expand. Defaults to <code>50</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>（可选，数值类型）query中词条扩展的最大长度，默认为50</td>
+</tr>
+<tr>
+<td><strong>prefix_length</strong></td>
+<td>(Optional, integer) Number of beginning characters left unchanged for fuzzy matching. Defaults to <code>0</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>（可选，数值类型）左侧不参与模糊查询的字符数，默认为0.</td>
+</tr>
+<tr>
+<td><strong>fuzzy_transpositions</strong></td>
+<td>(Optional, boolean) If <code>true</code>, edits for fuzzy matching include transpositions of two adjacent characters (ab → ba). Defaults to <code>true</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>（可选，布尔类型）如果为true，将相邻位置字符互换算作一次编辑距离，默认为true</td>
+</tr>
+<tr>
+<td><strong>fuzzy_rewrite</strong></td>
+<td>(Optional, string) Method used to rewrite the query. See the <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.4/query-dsl-multi-term-rewrite.html"><code>rewrite</code> parameter</a> for valid values and more information.<br />If the <code>fuzziness</code> parameter is not <code>0</code>, the <code>match</code> query uses a <code>rewrite</code> method of <code>top_terms_blended_freqs_${max_expansions}</code> by default.</td>
+</tr>
+<tr>
+<td></td>
+<td>（可选，字符串类型）这个方法是用来重写query的。查看可用参数的值或者更多详情请跳转到rewrite参数链接。</td>
+</tr>
+<tr>
+<td><strong>lenient</strong></td>
+<td>(Optional, boolean) If <code>true</code>, format-based errors, such as providing a text <code>query</code> value for a <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.4/number.html">numeric</a> field, are ignored. Defaults to <code>false</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>（可选，布尔类型）如果为true，像text query检索一个数值类型的字段，格式错误会忽略。默认为false。</td>
+</tr>
+<tr>
+<td><strong>operator</strong></td>
+<td>(Optional, string) Boolean logic used to interpret text in the <code>query</code> value. Valid values are:<br /><strong><code>OR</code> (Default)</strong>For example, a <code>query</code> value of <code>capital of Hungary</code> is interpreted as <code>capital OR of OR Hungary</code>. <br /><strong><code>AND</code></strong>For example, a <code>query</code> value of <code>capital of Hungary</code> is interpreted as <code>capital AND of AND Hungary</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td>（可选，字符串类型）布尔逻辑是用来在query中的文本上的。<br />OR（默认）例如，检索的值为capital of Hungary解释为capital OR of OR Hungary。<br />AND 例如，检索值capital OR of OR Hungary被解释为capital AND of AND Hungary。</td>
+</tr>
+<tr>
+<td><strong>minimum_should_match</strong></td>
+<td>(Optional, string) Minimum number of clauses that must match for a document to be returned. See the <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.4/query-dsl-minimum-should-match.html"><code>minimum_should_match</code> parameter</a> for valid values and more information.<br /></td>
+</tr>
+<tr>
+<td></td>
+<td>（可选，字符串类型）匹配应该返回的文档最小数量。（如果匹配到的文档小于这个值，则不返回文档）可以去查看<a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.4/query-dsl-minimum-should-match.html"><code>minimum_should_match</code> parameter</a>链接 查看可用的值。</td>
+</tr>
+<tr>
+<td><strong>zero_terms_query</strong></td>
+<td>(Optional, string) Indicates whether no documents are returned if the <code>analyzer</code> removes all tokens, such as when using a <code>stop</code> filter. Valid values are:<br /><strong><code>none</code> (Default)</strong><br />No documents are returned if the <code>analyzer</code> removes all tokens.<br /><strong><code>all</code></strong><br />Returns all documents, similar to a <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.4/query-dsl-match-all-query.html"><code>match_all</code></a> query.<br />See <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.4/query-dsl-match-query.html#query-dsl-match-query-zero">Zero terms query</a> for an example.</td>
+</tr>
+<tr>
+<td></td>
+<td>（可选，字符串类型）这个参数表示没有文档返回的时候，分词器是否删除所有的token，比如当使用 停用词 过滤的时候，可用的参数为：<br />none（默认）如果分词器删除所有的token，则不返回任何文档。<br />all  返回所有文档，和match_all 查询很像。查看例子可以访问zero terms query 的链接。</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes</h3>
+<h4 id="short-request-example-">Short request example - 简单的请求参数案例</h4>
+<blockquote>
+<p>You can simplify the match query syntax by combining the <code>&lt;field&gt;</code> and <code>query</code> parameters. For example:</p>
+</blockquote>
+<pre><code class="language-json">GET /_search
+{
+    &quot;query&quot;: {
+        &quot;match&quot; : {
+            &quot;message&quot; : &quot;this is a test&quot;
+        }
+    }
+}
+</code></pre>
+<h4 id="how-the-match-query-works-match">How the match query works -那么match 查询是怎么工作的呢</h4>
+<blockquote>
+<p>The <code>match</code> query is of type <code>boolean</code>. It means that the text provided is analyzed and the analysis process constructs a boolean query from the provided text. The <code>operator</code> parameter can be set to <code>or</code> or <code>and</code> to control the boolean clauses (defaults to <code>or</code>). The minimum number of optional <code>should</code> clauses to match can be set using the <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.4/query-dsl-minimum-should-match.html"><code>minimum_should_match</code></a> parameter.</p>
+<p>Here is an example with the <code>operator</code> parameter:</p>
+</blockquote>
+<p>match 是一种boolean查询，这就意味查询的text文本会被分词，并且分词过程会基于提供的文本构造一个boolean查询。operator参数可以设置为or或者and来控制boolean查询语句（默认是or）。<a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.4/query-dsl-minimum-should-match.html"><code>minimum_should_match</code></a>参数可以设置，should语句的最小匹配数量。</p>
+<p>下面是一个operator参数的例子：</p>
+<pre><code class="language-json">GET /_search
+{
+    &quot;query&quot;: {
+        &quot;match&quot; : {
+            &quot;message&quot; : {
+                &quot;query&quot; : &quot;this is a test&quot;,
+                &quot;operator&quot; : &quot;and&quot;
+            }
+        }
+    }
+}
+</code></pre>
+<blockquote>
+<p>The <code>analyzer</code> can be set to control which analyzer will perform the analysis process on the text. It defaults to the field explicit mapping definition, or the default search analyzer.</p>
+<p>The <code>lenient</code> parameter can be set to <code>true</code> to ignore exceptions caused by data-type mismatches, such as trying to query a numeric field with a text query string. Defaults to <code>false</code>.</p>
+</blockquote>
+<p>analyzer参数可以对text类型的字段在分词阶段使用哪个分词器。默认是取mapping定义中显式设置的分词器，没有设置则会使用默认分词器（standard分词器）。</p>
+<p>lenient参数可以设置为true来忽略类型不匹配导致的异常，比如用text类型去检索去查数值类型，默认是false。</p>
+<h4 id="fuzziness-in-the-match-query-match">Fuzziness in the match query - match中的模糊搜索</h4>
+<blockquote>
+<p><code>fuzziness</code> allows <em>fuzzy matching</em> based on the type of field being queried. See <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.4/common-options.html#fuzziness">Fuzziness</a> for allowed settings.</p>
+<p>The <code>prefix_length</code> and <code>max_expansions</code> can be set in this case to control the fuzzy process. If the fuzzy option is set the query will use <code>top_terms_blended_freqs_${max_expansions}</code> as its <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.4/query-dsl-multi-term-rewrite.html">rewrite method</a> the <code>fuzzy_rewrite</code> parameter allows to control how the query will get rewritten.</p>
+<p>Fuzzy transpositions (<code>ab</code> → <code>ba</code>) are allowed by default but can be disabled by setting <code>fuzzy_transpositions</code> to <code>false</code>.</p>
+</blockquote>
+<p>fuzziness参数允许基于被检索的字段进行模糊匹配。可以查看 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.4/common-options.html#fuzziness">Fuzziness</a> 更多的设置。</p>
+<p>prefix_length和max_expansions参数可以在这个案例中设置来控制模糊查询流程。如果模糊查询选项被设置了，这个查询会使用top_terms_blended_freqs_${max_expansions}作为它的重写方法。fuzzy_rewrite参数可以控制怎么重写。</p>
+<p>模糊翻转（ab-&gt;ba）默认是开启的，但是你可以通过将fuzzy_transpositions参数设置为false来关闭。</p>
+<blockquote>
+<p>NOTE: Fuzzy matching is not applied to terms with synonyms or in cases where the analysis process produces multiple tokens at the same position. Under the hood these terms are expanded to a special synonym query that blends term frequencies, which does not support fuzzy expansion.</p>
+</blockquote>
+<p>备注：模糊匹配不会应用在同义词词条上，分词过程产生的一个位置上的多个token上也不会生效。底层这些词条会扩展成一个特殊的同义词query，它混合了词条频数，不支持模糊扩展。</p>
+<pre><code class="language-json">GET /_search
+{
+    &quot;query&quot;: {
+        &quot;match&quot; : {
+            &quot;message&quot; : {
+                &quot;query&quot; : &quot;this is a test&quot;,
+                &quot;operator&quot; : &quot;and&quot;
+            }
+        }
+    }
+}
+</code></pre>
+<h4 id="zero-terms-query">Zero terms query</h4>
+<blockquote>
+<p>If the analyzer used removes all tokens in a query like a <code>stop</code> filter does, the default behavior is to match no documents at all. In order to change that the <code>zero_terms_query</code> option can be used, which accepts <code>none</code> (default) and <code>all</code> which corresponds to a <code>match_all</code> query.</p>
+</blockquote>
+<p>如果使用的分词器想stop分词过滤一样删除了所有的token，那么就匹配不到任何文档。为了避免这种情况，zero_terms_query选项的作用就体现出来了，这个选项可以传入none(默认)和all（相当于match_all）。</p>
+<pre><code class="language-json">GET /_search
+{
+    &quot;query&quot;: {
+        &quot;match&quot; : {
+            &quot;message&quot; : {
+                &quot;query&quot; : &quot;to be or not to be&quot;,
+                &quot;operator&quot; : &quot;and&quot;,
+                &quot;zero_terms_query&quot;: &quot;all&quot;
+            }
+        }
+    }
+}
+</code></pre>
+<h4 id="cutoff-frequency">Cutoff frequency</h4>
+<blockquote>
+<h3 id="warning">WARNING</h3>
+<h3 id="deprecated-in-730">Deprecated in 7.3.0.</h3>
+<p>This option can be omitted as the <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.4/query-dsl-match-query.html">Match</a> can skip blocks of documents efficiently, without any configuration, provided that the total number of hits is not tracked.</p>
+</blockquote>
+<p>注意：</p>
+<p>7.3.0中已经废弃了</p>
+<p>由于Match可用有效的跳过文档块，所以这个选项可以被忽略，在不跟踪中命中总数的前提下，无需任何配置。</p>
+<blockquote>
+<p>The match query supports a <code>cutoff_frequency</code> that allows specifying an absolute or relative document frequency where high frequency terms are moved into an optional subquery and are only scored if one of the low frequency (below the cutoff) terms in the case of an <code>or</code> operator or all of the low frequency terms in the case of an <code>and</code> operator match.</p>
+</blockquote>
+<p>Match query支持cutoff_frequency（截止频率），cutoff_frequency允许你指定绝对或者相对文档频率，其中高频词项被移动到可选的子查询中，并且只有在<code>or</code>操作符的情况下低频词（低于截止值）之一 或所有在<code>and</code> 运算符匹配的情况下的低频词项。</p>
+<blockquote>
+<p>This query allows handling <code>stopwords</code> dynamically at runtime, is domain independent and doesn’t require a stopword file. It prevents scoring / iterating high frequency terms and only takes the terms into account if a more significant / lower frequency term matches a document. Yet, if all of the query terms are above the given <code>cutoff_frequency</code> the query is automatically transformed into a pure conjunction (<code>and</code>) query to ensure fast execution.</p>
+</blockquote>
+<p>这个query允许运行时动态处理停用词，独立于域并且不需要依赖停用词文件。它可以防止对高频词打分、迭代，并且仅在更重要/较低频率的词与文档匹配时才考虑这些词。如果所有的查询此项都高于跟定的cuttof_frequency，这个查询会自动转换为纯连接词query（and）来确保更快的执行。</p>
+<blockquote>
+<p>The <code>cutoff_frequency</code> can either be relative to the total number of documents if in the range from 0 (inclusive) to 1 (exclusive) or absolute if greater or equal to <code>1.0</code>.</p>
+</blockquote>
+<p>cuttof_frequency 既可以与文档总数有关，如果范围大于等于0小于1，也可以是绝对的如果大于等于1.0。</p>
+<blockquote>
+<p>Here is an example showing a query composed of stopwords exclusively:</p>
+</blockquote>
+<p>这里有个例子，完全由停用词组合成的</p>
+<pre><code class="language-json">GET /_search
+{
+    &quot;query&quot;: {
+        &quot;match&quot; : {
+            &quot;message&quot; : {
+                &quot;query&quot; : &quot;to be or not to be&quot;,
+                &quot;cutoff_frequency&quot; : 0.001
+            }
+        }
+    }
+}
+</code></pre>
+<blockquote>
+<p>The <code>cutoff_frequency</code> option operates on a per-shard-level. This means that when trying it out on test indexes with low document numbers you should follow the advice in <a href="https://www.elastic.co/guide/en/elasticsearch/guide/2.x/relevance-is-broken.html">Relevance is broken</a>.</p>
+</blockquote>
+<p>cuttof_frequency选项在分片级别上生效。这就意味着当在文档数少的索引上尝试时，你应该遵循Relevance is broken的建议。</p>
+<h4 id="synonyms-">Synonyms--同义词</h4>
+<blockquote>
+<p>The <code>match</code> query supports multi-terms synonym expansion with the <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.4/analysis-synonym-graph-tokenfilter.html">synonym_graph</a> token filter. When this filter is used, the parser creates a phrase query for each multi-terms synonyms. For example, the following synonym: <code>"ny, new york" would produce:</code></p>
+<p><code>(ny OR ("new york"))</code></p>
+<p>It is also possible to match multi terms synonyms with conjunctions instead:</p>
+</blockquote>
+<p>match检索支持通过<a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.4/analysis-synonym-graph-tokenfilter.html">synonym_graph</a>词条过滤器扩展多词项同义词。当使用这个过滤器的时候，语法解析器会创建一个检索每个多词条同义词的语法。例如，下面的同义词：“ny,new york”会被解析成（ny OR ("new york")）</p>
+<p>也有可能以连词匹配多个词项同义词：</p>
+<pre><code class="language-json">GET /_search
+{
+   &quot;query&quot;: {
+       &quot;match&quot; : {
+           &quot;message&quot;: {
+               &quot;query&quot; : &quot;ny city&quot;,
+               &quot;auto_generate_synonyms_phrase_query&quot; : false
+           }
+       }
+   }
+}
+</code></pre>
+<blockquote>
+<p>The example above creates a boolean query:</p>
+<p><code>(ny OR (new AND york)) city</code></p>
+<p>that matches documents with the term <code>ny</code> or the conjunction <code>new AND york</code>. By default the parameter <code>auto_generate_synonyms_phrase_query</code> is set to <code>true</code>.</p>
+</blockquote>
+<p>上述例子会创建一个bool query：（ny OR (new AND york)）city ，以cy或者连词 new AND york 匹配文档。默认auto_generate_synonyms_phrase_query参数为true。</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../Match%20boolean%20prefix%20query/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Match boolean prefix query" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Match boolean prefix query
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Query%20DSL/" class="md-footer__link md-footer__link--next" aria-label="Next: Query DSL" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Query DSL
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.467223ff.min.js"></script>
+      
+    
+  </body>
+</html>
